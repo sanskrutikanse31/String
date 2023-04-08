@@ -1,0 +1,28 @@
+public class PalindromeOrNot {
+    public static int isPalindrome(String str,int start,int end)
+    {
+    	//steps in recursion
+    	//1.base case
+    	//2.small calculation
+    	//3.recursive call
+    	if(start>=end)
+    	{
+    		return 1;
+    	}
+    	
+    	if(str.charAt(start)!=str.charAt(end))
+    	{
+    	  return 0;
+    	}
+    	return isPalindrome(str,start+1,end-1);
+    	
+    }
+	public static void main(String args[])
+    {
+    	String str="madam";
+    	int start=0;
+    	int end=str.length()-1;
+    	System.out.print(isPalindrome(str,start,end));
+    	
+    }
+}
